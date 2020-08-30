@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
         try {
             byte[] encodeByte = Base64.decode(encodedString, Base64.DEFAULT);
             Bitmap bitmap = BitmapFactory.decodeByteArray(encodeByte, 0, encodeByte.length);
+            // 비트맵 사이즈 조절해서 이미지에 넣기
+//            byte[] decodedString = Base64.decode(dataList.get("drw").toString(), Base64.DEFAULT);
+//            BitmapFactory.Options options = new BitmapFactory.Options();
+//            options.inSampleSize = 4;
+//            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+//            Bitmap resized = Bitmap.createScaledBitmap(decodedByte , 400, 400, true);
+//            Image_Mypage_Like_Product.setImageBitmap(resized);
             return bitmap;
         } catch (Exception e) {
             e.getMessage();
